@@ -23,7 +23,7 @@ Possible returns:
 Installing
 -------------
 ```
-pip install string_lib
+pip install -i https://test.pypi.org/simple/ string-lib
 ```
 Quick start
 -----------
