@@ -12,7 +12,7 @@ class StringLib(object):
 
     def _validate(self):
         """
-        Method to validate if input is valid
+        Method to validate if entries are valid
         """
         for str_ in self.strs:
             key = list(str_.keys())[0]
