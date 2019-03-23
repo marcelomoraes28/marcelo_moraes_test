@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  test_lib:
+    container_name: test_lib
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: pytest -ra
+    depends_on:
+      - redis_default
+      - redis_1
+      - redis_2
+      - memcache_default
+      - memcache_1
+      - memcache_2
+  redis_default:
+    container_name: redis_default
+    image: redis:latest
+  redis_1:
+    container_name: redis_1
+    image: redis:latest
+  redis_2:
+    container_name: redis_2
+    image: redis:latest
+  memcache_default:
+    container_name: memcache_default
+    image: memcached:latest
+  memcache_1:
+    container_name: memcache_1
+    image: memcached:latest
+  memcache_2:
+    container_name: memcache_2
+    image: memcached:latest
